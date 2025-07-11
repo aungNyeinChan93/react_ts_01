@@ -1,4 +1,6 @@
 import React from 'react';
+import CounterProvider from './contexts/CounterProvider';
+import TestCounter from './components/share/TestCounter';
 // import ThemeProvider from './contexts/theme/ThemeProvider';
 // import ThemeTest from './components/tests/ThemeTest';
 // import FunctionCounter from './components/tests/FunctionCounter';
@@ -62,6 +64,10 @@ const App = () => {
         {/* <ThemeProvider>
           <ThemeTest />
         </ThemeProvider> */}
+
+        <CounterProvider>
+          <TestCounter />
+        </CounterProvider>
       </section>
     </React.Fragment>
   );
