@@ -7,7 +7,7 @@
 // }
 
 // const UserProfile = () => {
-//     const [profile, setProfile] = useState<UserProfile>({
+//     const [profile, setProfile] = useState<Partial<UserProfile>>({
 //         name: '',
 //         age: 0,
 //         email: ''

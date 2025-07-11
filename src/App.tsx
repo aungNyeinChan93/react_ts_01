@@ -1,4 +1,6 @@
 import React from 'react';
+// import ThemeProvider from './contexts/theme/ThemeProvider';
+// import ThemeTest from './components/tests/ThemeTest';
 // import FunctionCounter from './components/tests/FunctionCounter';
 // import CounterClassTest from './components/tests/CounterClassTest';
 // import { useState } from 'react';
@@ -22,7 +24,7 @@ const App = () => {
   //   isUser: true
   // })
 
-  // const userInfo: UI = {
+  // const userInfo: UI = { 
   //   name: 'chan',
   //   age: 30,
   // }
@@ -56,6 +58,10 @@ const App = () => {
 
         {/* <CounterClassTest /> */}
         {/* <FunctionCounter /> */}
+
+        {/* <ThemeProvider>
+          <ThemeTest />
+        </ThemeProvider> */}
       </section>
     </React.Fragment>
   );

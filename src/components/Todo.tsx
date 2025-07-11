@@ -11,7 +11,7 @@ const Todo = () => {
 
     const [task, setTask] = useState<string>('');
 
-    const addTodo = (e: FormEvent) => {
+    const addTodo = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const newTodo: Todo = {
             id: todos.length + 1,
