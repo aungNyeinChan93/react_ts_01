@@ -17,21 +17,44 @@ const Register = () => {
   const submitRegister: SubmitHandler<RegisterFormData> = (data) => {
     console.log(data);
   };
+
+  //   watch()
   return (
     <React.Fragment>
       <section>
         <form action="" onSubmit={handleSubmit(submitRegister)}>
           <label htmlFor="name">
+            Name
             <input
               type="name"
               id="name"
               placeholder="name"
-              {...register("name", { required: true, min: 2, max: 20 })}
+              {...register("name", {
+                required: {
+                  value: true,
+                  message: ' "Name field is required!"',
+                },
+                minLength: { value: 2, message: "min length must be min-2" },
+                maxLength: 20,
+              })}
             />
           </label>
-          <span>{errors.name && <>Emial field is required!</>}</span>
+          <span>
+            {/* {errors.name?.type === "required" && <>{errors.name.message}</>} */}
+            {errors.name?.type === "maxLength" && (
+              <>
+                <p>Max Length must be under 20 </p>
+              </>
+            )}
+            {errors?.name && (
+              <>
+                <p>{errors.name?.message}</p>
+              </>
+            )}
+          </span>
 
           <label htmlFor="email">
+            Email
             <input
               type="email"
               id="email"
@@ -41,6 +64,7 @@ const Register = () => {
           </label>
           <span>{errors.email && <>Emial field is required!</>}</span>
           <label htmlFor="password">
+            Password
             <input
               type="text"
               id="password"
@@ -55,7 +79,7 @@ const Register = () => {
             className={isSubmitting ? "bg-red-500" : "bg-green-500"}
             type="submit"
           >
-            Submit
+            {isSubmitting ? "loading" : "submit"}
           </button>
         </form>
       </section>
