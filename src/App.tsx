@@ -1,5 +1,6 @@
-import React from 'react';
-import CounterReducer from './components/CounterReducer';
+import React from "react";
+import Register from "./components/tests/Register";
+// import CounterReducer from "./components/CounterReducer";
 // import CounterProvider from './contexts/CounterProvider';
 // import TestCounter from './components/share/TestCounter';
 // import ThemeProvider from './contexts/theme/ThemeProvider';
@@ -20,6 +21,7 @@ import CounterReducer from './components/CounterReducer';
 // import MyCounter from './components/MyCounter';
 // import UserProvider from './contexts/User/UserProvider';
 // import Profile from './components/Profile';
+// import Form from "./components/tests/Form";
 const App = () => {
   // const [user] = useState({
   //   name: 'aung',
@@ -27,7 +29,7 @@ const App = () => {
   //   isUser: true
   // })
 
-  // const userInfo: UI = { 
+  // const userInfo: UI = {
   //   name: 'chan',
   //   age: 30,
   // }
@@ -70,10 +72,14 @@ const App = () => {
           <TestCounter />
         </CounterProvider> */}
 
-        <CounterReducer />
+        {/* <CounterReducer /> */}
+
+        {/* <Form /> */}
+
+        <Register />
       </section>
     </React.Fragment>
   );
 };
 
-export default App; 
+export default App;
