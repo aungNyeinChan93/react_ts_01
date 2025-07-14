@@ -1,5 +1,6 @@
 import React from "react";
-import Login from "./components/tests/Login";
+// import Login from "./components/tests/Login";
+// import UseFormTest from "./components/tests/UseFormTest";
 // import Register from "./components/tests/Register";
 // import CounterReducer from "./components/CounterReducer";
 // import CounterProvider from './contexts/CounterProvider';
@@ -79,7 +80,9 @@ const App = () => {
 
         {/* <Register /> */}
 
-        <Login />
+        {/* <Login /> */}
+
+        {/* <UseFormTest /> */}
       </section>
     </React.Fragment>
   );
